@@ -16,37 +16,36 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   var length = (window.prompt("How many characters would you like your password to contain?"))
-  console.log(length)
     if (length<8 || length> 128){
-      alert("Password should be from 8 to 128 characters long.")
+      alert("Password should be from 8 to 128 characters long.");
       return ("")
     } 
-    includeLower = window.confirm("Would you like to use lowercase letters?")
+    includeLower = window.confirm("Would you like to use lowercase letters?");
     if (includeLower === true){
         candidates = lowercase + candidates
         letter = lowercase[Math.floor(Math.random() * lowercase.length)]
         password = password + letter
      }  
-  includeUpper = window.confirm("Would you like to use uppercase letters?")
+    includeUpper = window.confirm("Would you like to use uppercase letters?");
     if (includeUpper === true){
         candidates = uppercase + candidates
         letter = uppercase[Math.floor(Math.random() * uppercase.length)]
         password = password + letter
       } 
-  includeSpecial = window.confirm("Would you like to use special characters?")
-      if (includeSpecial === true){
-          candidates = specialChars + candidates
-          letter = specialChars[Math.floor(Math.random() * specialChars.length)]
-          password = password + letter
+    includeSpecial = window.confirm("Would you like to use special characters?");
+    if (includeSpecial === true){
+        candidates = specialChars + candidates
+        letter = specialChars[Math.floor(Math.random() * specialChars.length)]
+        password = password + letter
         } 
-  includeNumber = window.confirm("Would you like to use numbers?")
-        if (includeNumber === true){
-            candidates = numbers + candidates
-            letter = numbers[Math.floor(Math.random() * uppercase.length)]
-            password = password + letter
+    includeNumber = window.confirm("Would you like to use numbers?");
+    if (includeNumber === true){
+        candidates = numbers + candidates
+        letter = numbers[Math.floor(Math.random() * uppercase.length)]
+        password = password + letter
           } 
     if (candidates.length === 0){
-      alert ("You must choose at least one character type.")
+      alert ("You must choose at least one character type.");
       return ("")
     }
 
