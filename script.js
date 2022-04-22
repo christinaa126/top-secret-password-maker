@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
  let lowercase = "abcdefghijklmnopqrstuvwxyz"
  let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
  let numbers = "0123456789"
- let specialChars = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ "
+ let specialChars = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~ "
  let candidates = ""
  let length = 0
  let includeLower = false
